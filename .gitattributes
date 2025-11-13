@@ -1,0 +1,52 @@
+# ----------------------------------------
+# UNITY PROJECT - .gitattributes
+# ----------------------------------------
+
+# Text files: tự động chuẩn hóa line endings về LF (tránh lỗi khi cross-platform)
+*.cs     text diff=csharp
+*.shader text
+*.cginc  text
+*.txt    text
+*.md     text
+*.json   text
+*.xml    text
+*.yaml   text
+*.yml    text
+*.asmdef text
+*.unity  text
+*.prefab text
+*.mat    text
+*.meta   text
+*.asset  text
+
+# Binary files: không diff, không merge, không sửa line endings
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.psd    binary
+*.tga    binary
+*.fbx    binary
+*.mp3    binary
+*.wav    binary
+*.ogg    binary
+*.anim   binary
+*.controller binary
+*.ttf    binary
+*.otf    binary
+*.dll    binary
+*.mp4    binary
+*.mov    binary
+*.avi    binary
+
+# Unity scene files có thể merge bằng Unity Smart Merge nếu được cài đặt
+*.unity merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.mat    merge=unityyamlmerge eol=lf
+*.asset  merge=unityyamlmerge eol=lf
+
+# Git Large File Storage (tuỳ chọn – nếu bạn dùng Git LFS)
+# *.psd filter=lfs diff=lfs merge=lfs -text
+# *.fbx filter=lfs diff=lfs merge=lfs -text
+
+# Catch-all rule (mặc định mọi file text sẽ dùng LF)
+* text=auto
